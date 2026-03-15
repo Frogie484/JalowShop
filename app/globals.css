@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-manrope: "Avenir Next", "Segoe UI", sans-serif;
+  --font-cormorant: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(182, 122, 69, 0.1), transparent 30%),
+    linear-gradient(180deg, #fbf8f4 0%, #f7f3ee 100%);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  @apply transition-all duration-300;
+}
+
+::selection {
+  @apply bg-accent text-white;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-14 sm:py-20;
+}
+
+.card-surface {
+  @apply rounded-[28px] border border-line bg-surface shadow-soft;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border border-line bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-stone;
+}
+
+.field {
+  @apply w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none ring-0 placeholder:text-stone/80 focus:border-accent;
+}
