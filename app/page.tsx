@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FAQList } from "@/components/faq-list";
 import { ProductCard } from "@/components/product-card";
@@ -19,74 +18,61 @@ export default function HomePage() {
   return (
     <>
       <section className="container-shell pb-10">
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="card-surface bg-hero-glow px-6 py-10 sm:px-10 sm:py-14">
-            <span className="pill animate-rise">Новая капсула весна-лето</span>
-            <h1 className="mt-6 max-w-3xl font-display text-6xl font-semibold leading-[0.92] sm:text-7xl">
-              Jalowshop. Вещи, которые выглядят спокойно, но запоминаются надолго.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-stone">
-              Премиальный онлайн-магазин одежды и аксессуаров для собранного
-              гардероба. Продуманные силуэты, честные материалы и визуальная чистота.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/catalog"
-                className="rounded-full bg-ink px-7 py-4 text-sm font-semibold text-white hover:bg-accentDark"
-              >
-                Перейти в каталог
-              </Link>
-              <Link
-                href="#hits"
-                className="rounded-full border border-line px-7 py-4 text-sm font-semibold hover:border-accent hover:text-accent"
-              >
-                Смотреть хиты
-              </Link>
-            </div>
-            <div className="mt-10 grid gap-5 border-t border-line/80 pt-8 sm:grid-cols-3">
-              <div>
-                <p className="text-3xl font-semibold">12k+</p>
-                <p className="text-sm text-stone">довольных покупателей</p>
+        <div className="card-surface overflow-hidden bg-hero-glow px-6 py-10 sm:px-10 sm:py-14">
+          <div className="hero-copy max-w-4xl">
+              <span className="pill animate-rise">Новая капсула весна-лето</span>
+              <h1 className="hero-title">
+                Jalowshop. Вещи, которые выглядят спокойно, но запоминаются надолго.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg text-stone">
+                Премиальный онлайн-магазин одежды и аксессуаров для собранного
+                гардероба. Продуманные силуэты, честные материалы и визуальная чистота.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/catalog"
+                  className="rounded-full bg-ink px-7 py-4 text-sm font-semibold text-white hover:bg-accentDark"
+                >
+                  Перейти в каталог
+                </Link>
+                <Link
+                  href="#hits"
+                  className="rounded-full border border-line px-7 py-4 text-sm font-semibold hover:border-accent hover:text-accent"
+                >
+                  Смотреть хиты
+                </Link>
               </div>
-              <div>
-                <p className="text-3xl font-semibold">48 ч</p>
-                <p className="text-sm text-stone">средняя доставка по РФ</p>
+              <div className="mt-10 grid gap-5 border-t border-line/80 pt-8 sm:grid-cols-3">
+                <div>
+                  <p className="text-3xl font-semibold">12k+</p>
+                  <p className="text-sm text-stone">довольных покупателей</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-semibold">48 ч</p>
+                  <p className="text-sm text-stone">средняя доставка по РФ</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-semibold">4.9/5</p>
+                  <p className="text-sm text-stone">средняя оценка сервиса</p>
+                </div>
               </div>
-              <div>
-                <p className="text-3xl font-semibold">4.9/5</p>
-                <p className="text-sm text-stone">средняя оценка сервиса</p>
-              </div>
-            </div>
           </div>
-          <div className="grid gap-6">
-            <div className="card-surface relative min-h-[360px] overflow-hidden bg-[#e9dfd1] p-8">
-              <Image
-                src="/images/editorial-hero.svg"
-                alt="Новая коллекция Jalowshop"
-                fill
-                className="object-cover"
-              />
-              <div className="relative z-10 max-w-xs">
-                <span className="pill bg-white/85">Скидки до 20%</span>
-                <h2 className="mt-4 font-display text-4xl font-semibold">
-                  Акцент на фактуру, цвет и посадку
-                </h2>
-              </div>
+        </div>
+
+        <div className="mt-6">
+          <div className="card-surface grid gap-4 bg-[#1d1a17] px-8 py-8 text-white sm:grid-cols-[1fr_auto] sm:items-end">
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-white/60">Special drop</p>
+              <h3 className="mt-2 font-display text-4xl font-semibold">
+                -15% на аксессуары до конца недели
+              </h3>
             </div>
-            <div className="card-surface grid gap-4 bg-[#1d1a17] px-8 py-8 text-white sm:grid-cols-[1fr_auto] sm:items-end">
-              <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-white/60">Special drop</p>
-                <h3 className="mt-2 font-display text-4xl font-semibold">
-                  -15% на аксессуары до конца недели
-                </h3>
-              </div>
-              <Link
-                href="/catalog"
-                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink"
-              >
-                Выбрать
-              </Link>
-            </div>
+            <Link
+              href="/catalog"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink"
+            >
+              Выбрать
+            </Link>
           </div>
         </div>
       </section>

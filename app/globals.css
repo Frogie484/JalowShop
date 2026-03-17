@@ -50,3 +50,15 @@ textarea {
 .field {
   @apply w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none ring-0 placeholder:text-stone/80 focus:border-accent;
 }
+
+.hero-layout {
+  @apply grid items-center gap-8 lg:gap-12 xl:gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.82fr)];
+}
+
+.hero-copy {
+  @apply relative z-10 max-w-[36rem];
+}
+
+.hero-title {
+  @apply mt-6 max-w-[12ch] font-display text-5xl font-semibold leading-[0.92] sm:text-6xl xl:text-7xl;
+}
